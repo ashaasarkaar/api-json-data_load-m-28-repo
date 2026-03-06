@@ -17,21 +17,31 @@ const displayPosts = (posts) => {
     //     console.log(post);
     // }
 
-    posts.forEach(post => {
-        const title = post.title;
-        console.log(title);
-        // console.log(post);
-
-        //1. get the parent container
+     //1. get the parent container and also empty the container
         const postsContainer = document.getElementById("posts-container");
+        postsContainer.innerHTML = '';
         // console.log(postsContainer);
 
+    posts.forEach(post => {
+        // const title = post.title;
+        // console.log(title);
+        // console.log(post);
+
+       
+
         //2. create HTML elements
-        const li = document.createElement('li');
-        li.innerText = title;
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <div class="card bg-primary text-primary-content w-96">
+            <div class="card-body">
+                <h2 class="card-title">${post.title}</h2>
+                <p>${post.body}</p>
+            </div>
+        </div>
+        `
 
         //connection add with parent 
-        postsContainer.appendChild(li);
+        postsContainer.appendChild(div);
         // console.log(postInLi);
     })
 };

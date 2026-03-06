@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Data With Promise</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <button onclick="loadData()">Load Data</button>
-    <button onclick="loadPosts()">load Posts</button>
-    <ul id="posts-container"></ul>
+
+<body class="w-11/12 mx-auto">
+    <button onclick="loadData()" class="btn btn-error btn-soft m-4">Load Data</button>
+    <button onclick="loadPosts()" class="btn btn-primary btn-soft m-4">load Posts</button>
+    <!-- <ol id="posts-container"></ol> -->
+
+    <div id="posts-container" class="mt-10 mx-10 grid grid-cols-3 gap-10 gap-y-2">
+        
+    </div>
 
     <!-- link js -->
-     <script src="./js/posts.js"></script>
+    <script src="./js/posts.js"></script>
     <!-- <script src="json-fetch-promise.js"></script> -->
-      <!-- <script src="./js/fetch.js"></script>
+    <!-- <script src="./js/fetch.js"></script>
      <script src="./js/script.js"></script> -->
-   
+
 
 </body>
+
 </html>
