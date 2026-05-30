@@ -8,6 +8,19 @@ const loadPosts = () =>{
     })
 };
 
+//Json with synchronus
+// const data = async () => {
+//     console.log('true');
+//     const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+//     const json = await response.json();
+//     console.log(json);
+//     console.log('hello'); 
+//     displayPosts(json) // aivabe synchronus vabe call kora jabe
+
+// }
+// data();
+
 const displayPosts = (posts) => {
     // for(let i=0; i<=posts.length-1; i++){
     //     console.log(posts[i]);
